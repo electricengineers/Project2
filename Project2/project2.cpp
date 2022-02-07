@@ -1,22 +1,24 @@
 #include <iostream>
 using namespace std;
+
 class Base
 {
-	public
-		:
-			void print() {
-				cout << "기본 클래스 함수" << endl;
-			}
+	public : void print()
+	{
+		cout << "기본 클래스 함수" << endl;
+	}
 };
+
 class Derived : public Base
 {
-	public
-		:
-			void print() {
-				cout <<"파생 클래스 함수" << endl;
-			}
+	public : void print() 
+	{
+		cout <<"파생 클래스 함수" << endl;
+	}
 };
-int main() {
+
+int main() 
+{
 	Derived derived1;
 	// 파생클래스를 가리키는 Base type 포인터
 	Base* ptr = &derived1;
